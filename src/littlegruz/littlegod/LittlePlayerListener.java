@@ -66,6 +66,8 @@ public class LittlePlayerListener extends PlayerListener{
             }
             
             if(part){
+               //TODO: Learn to throw a custom event to make the water flow back
+               //Could make it part from ticks given off by the liquid flow event
                Location locDown;
                plugin.getServer().broadcastMessage("o hay moses");
                loc = startingBlock.getLocation();
@@ -79,7 +81,8 @@ public class LittlePlayerListener extends PlayerListener{
                      
                      locDown = loc.clone();
                      locDown.setY(locDown.getY() - 1);
-                     while(locDown.getBlock().getType().compareTo(Material.STATIONARY_WATER) == 0){
+                     while(locDown.getBlock().getType().compareTo(Material.STATIONARY_WATER) == 0
+                           || locDown.getBlock().getType().compareTo(Material.WATER) == 0){
                         locDown.getBlock().setType(Material.AIR);
                         locDown.setY(locDown.getY() - 1);
                      }
@@ -96,7 +99,8 @@ public class LittlePlayerListener extends PlayerListener{
                      
                      locDown = loc.clone();
                      locDown.setY(locDown.getY() - 1);
-                     while(locDown.getBlock().getType().compareTo(Material.STATIONARY_WATER) == 0){
+                     while(locDown.getBlock().getType().compareTo(Material.STATIONARY_WATER) == 0
+                           || locDown.getBlock().getType().compareTo(Material.WATER) == 0){
                         locDown.getBlock().setType(Material.AIR);
                         locDown.setY(locDown.getY() - 1);
                      }
@@ -113,7 +117,8 @@ public class LittlePlayerListener extends PlayerListener{
                      
                      locDown = loc.clone();
                      locDown.setY(locDown.getY() - 1);
-                     while(locDown.getBlock().getType().compareTo(Material.STATIONARY_WATER) == 0){
+                     while(locDown.getBlock().getType().compareTo(Material.STATIONARY_WATER) == 0
+                           || locDown.getBlock().getType().compareTo(Material.WATER) == 0){
                         locDown.getBlock().setType(Material.AIR);
                         locDown.setY(locDown.getY() - 1);
                      }
@@ -130,7 +135,8 @@ public class LittlePlayerListener extends PlayerListener{
                      
                      locDown = loc.clone();
                      locDown.setY(locDown.getY() - 1);
-                     while(locDown.getBlock().getType().compareTo(Material.STATIONARY_WATER) == 0){
+                     while(locDown.getBlock().getType().compareTo(Material.STATIONARY_WATER) == 0
+                           || locDown.getBlock().getType().compareTo(Material.WATER) == 0){
                         locDown.getBlock().setType(Material.AIR);
                         locDown.setY(locDown.getY() - 1);
                      }
