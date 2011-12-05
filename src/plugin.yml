@@ -1,3 +1,7 @@
 name: Little God
 main: littlegruz.littlegod.LittleMain
 version: 0.1
+commands:
+   numberwang:
+      description: That's numberwang!
+      usage: /numberwang
